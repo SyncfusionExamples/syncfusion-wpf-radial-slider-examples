@@ -4,22 +4,60 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:syncfusion="http://schemas.syncfusion.com/wpf"
+		xmlns:custon_label="clr-namespace:Custon_Label"
         mc:Ignorable="d" WindowStartupLocation="CenterScreen"
         Title="SfRadialSlider - Custom UI" Height="450" Width="600">
+    <Window.DataContext>
+        <custon_label:ViewModel/>
+    </Window.DataContext>
     <Grid>
-        <syncfusion:SfRadialSlider Name="sfRadialSlider">
+        <syncfusion:SfRadialSlider Value="{Binding SelectedValue,Mode=TwoWay}"
+                                   Content="{Binding SelectedValue}"
+                                   Name="sfRadialSlider">
+            
+            <!--Custom UI of tick labels-->
             <syncfusion:SfRadialSlider.LabelTemplate>
                 <DataTemplate>
-                    <TextBlock Background="Yellow"
+                    <TextBlock Background="SkyBlue"
                                Text="{Binding}" 
                                Foreground="Red"/>
                 </DataTemplate>
             </syncfusion:SfRadialSlider.LabelTemplate>
-            <TextBlock Text="{Binding ElementName=sfRadialSlider, Path=Value}" 
-                       Background="Yellow"
-                       FontSize="15"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"/>
+
+            <!--Custom UI of ticks-->
+            <syncfusion:SfRadialSlider.TickTemplate>
+                <DataTemplate>
+                    <Border Background="Red"/>
+                </DataTemplate>
+            </syncfusion:SfRadialSlider.TickTemplate>
+
+            <!--Custom UI of selection pointer-->
+            <syncfusion:SfRadialSlider.PointerStyle>
+                <Style TargetType="syncfusion:RadialPointer">
+                    <Setter Property="Height" Value="2"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="syncfusion:RadialPointer">
+                                <Border  Background="Goldenrod"/>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </syncfusion:SfRadialSlider.PointerStyle>
+
+            <!--Custom UI of preview selection pointer-->
+            <syncfusion:SfRadialSlider.PreviewPointerStyle>
+                <Style TargetType="syncfusion:RadialPreviewPointer">
+                    <Setter Property="Height" Value="2"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="syncfusion:RadialPreviewPointer">
+                                <Border Opacity="0.2"  Background="Red"/>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </syncfusion:SfRadialSlider.PreviewPointerStyle>
         </syncfusion:SfRadialSlider>
     </Grid>
 </Window>
