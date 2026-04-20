@@ -1,6 +1,31 @@
 # RadialSlider control samples
 
-This repository contains the samples that demonstrate the functionalities of RadialSlider like UI customization, min-max value and Start-end angle.
+RadialSlider is a circular input control that allows users to select values by rotating a thumb along a radial track, making it well suited for intuitive and visually engaging user interfaces. 
+
+This repository contains a collection of **sample applications that demonstrate the usage and features of the Syncfusion WPF Radial Slider control**. The samples help developers understand how to configure, customize, and integrate the Radial Slider into WPF applications.
+
+---
+
+## Overview
+The samples in this repository showcase how to configure and customize the RadialSlider control for different use cases. They highlight various configuration options that help developers fine‑tune the control’s appearance and behavior to match application requirements.
+
+These examples showcase:
+- Basic configuration
+- Different value ranges and scales
+- Custom styling and appearance
+- Label and tick customization
+- Real‑world UI scenarios
+
+---
+
+## What This Repository Demonstrates
+
+- Creating a Radial Slider in WPF
+- Setting minimum, maximum, and value ranges
+- Handling value change events
+- Customizing ticks, labels, and angles
+- Applying styles and themes
+- Using Radial Slider in practical UI layouts
 
 <table>
  <tr>
@@ -33,3 +58,16 @@ This repository contains the samples that demonstrate the functionalities of Rad
    <td><a href="Samples/RadialSlider-Features">Appearance</a></td>
  </tr>
 </table>
+
+These samples help developers quickly get started with the RadialSlider control and understand how to implement flexible, interactive circular input components in their applications.
+
+---
+
+## Use Cases
+The Radial Slider is well suited for:
+
+- Volume and brightness controls
+- Temperature or speed selection
+- Dashboard and IoT applications
+- Media and audio interfaces
+- Modern touch‑centric UIs
